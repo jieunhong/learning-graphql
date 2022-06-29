@@ -1,11 +1,18 @@
 type Query{
     customerById(id:ID): Customer
+    greeting: Greeting
 }
 type Mutation{
     addCustomer( name : String): Customer
 }
-
+type Subscription{
+    greetings: Greeting
+}
 type Customer{
     id: ID
     name: String
+}
+
+type Greeting{
+    greeting: String
 }
